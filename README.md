@@ -17,3 +17,6 @@ TailwindCSS
     -TailwindCSS allows for quick css bootstrapping and rapid development.
 Deployment
     -I deployed this project with vercel
+
+I have deployed this application. Feel free to give it a visit to try out at:
+    https://bands-orpin.vercel.app/
