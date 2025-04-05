@@ -19,5 +19,8 @@ TailwindCSS
 Deployment
     -I deployed this project with vercel
 
+Test
+    -I have added a couple basic test using Jest
+
 I have deployed this application. Feel free to give it a visit to try out at:
     https://bands-orpin.vercel.app/
