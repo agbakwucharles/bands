@@ -15,6 +15,7 @@ Things I've added to the project:
 
 TailwindCSS
     -TailwindCSS allows for quick css bootstrapping and rapid development.
+
 Deployment
     -I deployed this project with vercel
 
