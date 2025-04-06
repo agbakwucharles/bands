@@ -1,20 +1,15 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import ItemCard from './itemCard';
+import PunkBand from '../../band-json/punk-band.json'; 
 
 describe('ItemCard Component', () => {
     it('calls onTicketPurchase when the button is clicked', () => {
         // Mock function for onTicketPurchase
         const mockOnTicketPurchase = jest.fn();
 
-        // Mock band data
-        const mockBand = {
-            name: 'New Band',
-            description_blurb: 'This is some random information that I made up that makes no sense.',
-            location: 'Outside',
-            imgUrl: 'https://randomImageThatIsntReal.com',
-        };
-
+        // I decided to use the pre existing json for tests
+        const mockBand = PunkBand['ticketTypes'][0];
         // Render the component
         render(<ItemCard band={mockBand} onTicketPurchase={mockOnTicketPurchase} />);
 
@@ -35,12 +30,8 @@ describe('ItemCard Component', () => {
     it('matches snaptshot', () => {
         const mockOnTicketPurchase = jest.fn();
 
-        const mockBand = {
-            name: 'New Band',
-            description_blurb: 'This is some random information that I made up that makes no sense.',
-            location: 'Outside',
-            imgUrl: 'https://randomImageThatIsntReal.com',
-        };
+        // same as above
+        const mockBand = PunkBand['ticketTypes'][0];
 
         const mockData = render(<ItemCard band={mockBand} onTicketPurchase={mockOnTicketPurchase} />);
         expect(mockData).toMatchSnapshot();
